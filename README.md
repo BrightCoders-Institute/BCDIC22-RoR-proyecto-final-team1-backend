@@ -21,4 +21,10 @@
   - Reiyirak pdsmej@gmail.com
   - Severo siglesias@ucol.mx
   - Yaxkin121 ycardenas13@ucol.mx
+
+
+  Co-authored-by: Yaxkin121 <ycardenas13@ucol.mx>
+  Co-authored-by: Reiyirak <pdsmej@gmail.com>
+  Co-authored-by: Severo Iglesias <siglesias@ucol.mx>
+  Co-authored-by: Carloso0114 <carlossospinag@gmail.com>
 ## Badges
