@@ -1,4 +1,4 @@
-![BrightCoders Logo](../img/logo.png)
+ss![BrightCoders Logo](../img/logo.png)
 
 - [Proyecto Final](#proyecto-final)
   - [Objetivos](#objetivos)
@@ -58,42 +58,50 @@
 
 ## Flujo de trabajo sugerido
 
-### [ 01 ] Descripción del proyecto
+### [ 01 ] Project description
 
-> Escribe una breve descripción que permita entender de que trata este proyecto
+> Este es un proyecto que busca replicar las funcionalidades basicas de la famosa plataforma Air-Bnb. (Airbnb es un mercado comunitario que sirve para publicar, dar publicidad y reservar alojamiento de forma económica a través de internet o desde tu smarthphone). Está basado en la modalidad “Bed and Dinner” (de donde proviene el “bnd”)
 
-### [ 02 ] Requerimientos funcionales
+### [ 02 ] Functional requirements
 
 > Registra los requerimientos funcionales considerados para este proyecto, para que no sea tan extenso, puedes dividirlo en [milestones](#definiciones). Por ejemplo: Milestone 1:  Formulario o pantalla para registro de nuevos usuarios. Milestone 2: Pantalla de inicio que muestra un registro de todos los proyectos. Milestone 3: CRUD  de proyectos. No es necesario describir aquí en detalle todas las tareas, sino más bien los módulos o milestones más generales.
 
 - Milestone 1. Configuración inicial del proyecto: Crear estructura base, directorios, agregar librerías...
-- Milestone 2. Título: Descripción
-- Milestone 2. Título: Descripción
+- Milestone 2. Creacion de Base de datos: Se crearan las migraciones para generar el esquema.
+- Milestone 3. Crud de usuarios: ...
+- Milestone 4. Crud de alojamientos: ...
+- Milestone 5. Crud de reservas de alojamientos: ...
+- Milestone x. Deployment: ...
 
-### [ 03 ] Requerimientos no funcionales
+### [ 03 ] Non-functional requirements
 
-> Registra los aspectos no funcionales a considerar como tecnologías, calidad, etc.
+- Calidad
+  - Utilizar estilo de código definido por la comunidad (apoyarse en Rubocop)
+  - Incluir pruebas unitarias(tal vez)
+  - Puntuación en RubyCritic por lo menos 90 en la carpeta de la App y por lo menos 65 en las pruebas
+- Deployment
+  - Publicación de la App en un servidor web, frontend Netlify, Backend Railway
 
-### [ 04 ] Plan de trabajo
+### [ 04 ] Workplan
 
 > Organiza tus requerimientos ó `milestones` de manera calendarizada.
 
-Milestone | WK1 | WK2 | WK3 | WK4 | WK5 | WK6 | WK7 | WK8 | WK9 | WK10 | WK11 | WK12 | WK13 | WK14 | WK15 | WK16
----|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
- #1 | x | x | x
- #2 |   |   | x | x | x
+Milestone | WK1 | WK2 | WK3 | WK4 | WK5 | WK6 | WK7 | WK8 | WK9 |
+---|---|---|---|---|---|---|---|---|---|
+ #1 | x | x |
+ #2 |   | x |
 
-### [ 05 ] Diseño de la UI
+### [ 05 ] UI Design
 
 > Incluye aquí un enlace a tu propuesta de diseño
 
-### [ 07 ] Modelo de la base de datos
+### [ 06 ] Database model
 
 > Incluye aquí un enlace a tu modelo de base de datos
 
-### [ 08 ] GitHub Planner
+### [ 07 ] GitHub Planner
 
-> Incluye aquí un enlace a tu GitHub planner
+> https://github.com/orgs/BrightCoders-Institute/projects/36/views/2
 
 ## Definiciones
 
