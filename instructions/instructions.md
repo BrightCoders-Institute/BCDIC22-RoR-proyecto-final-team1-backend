@@ -5,13 +5,13 @@ ss![BrightCoders Logo](../img/logo.png)
   - [Instrucciones](#instrucciones)
   - [Entregables](#entregables)
   - [Flujo de trabajo sugerido](#flujo-de-trabajo-sugerido)
-    - [\[ 01 \] Descripción del proyecto](#-01--descripción-del-proyecto)
-    - [\[ 02 \] Requerimientos funcionales](#-02--requerimientos-funcionales)
-    - [\[ 03 \] Requerimientos no funcionales](#-03--requerimientos-no-funcionales)
-    - [\[ 04 \] Plan de trabajo](#-04--plan-de-trabajo)
-    - [\[ 05 \] Diseño de la UI](#-05--diseño-de-la-ui)
-    - [\[ 07 \] Modelo de la base de datos](#-07--modelo-de-la-base-de-datos)
-    - [\[ 08 \] GitHub Planner](#-08--github-planner)
+    - [\[ 01 \] Project description](#-01--project-description)
+    - [\[ 02 \] Functional requirements](#-02--functional-requirements)
+    - [\[ 03 \] Non-functional requirements](#-03--non-functional-requirements)
+    - [\[ 04 \] Workplan](#-04--workplan)
+    - [\[ 05 \] UI Design](#-05--ui-design)
+    - [\[ 06 \] Database model](#-06--database-model)
+    - [\[ 07 \] GitHub Planner](#-07--github-planner)
   - [Definiciones](#definiciones)
   - [Recursos](#recursos)
   
@@ -60,21 +60,24 @@ ss![BrightCoders Logo](../img/logo.png)
 
 ### [ 01 ] Project description
 
-> Este es un proyecto que busca replicar las funcionalidades basicas de la famosa plataforma Air-Bnb. (Airbnb es un mercado comunitario que sirve para publicar, dar publicidad y reservar alojamiento de forma económica a través de internet o desde tu smarthphone). Está basado en la modalidad “Bed and Dinner” (de donde proviene el “bnd”)
+> This is a project that seeks to replicate the basic functionalities of the famous Air-Bnb platform. (Airbnb is a community marketplace for listing, advertising, and booking cheap accommodation online or from your smartphone.) It is based on the “Bed and Dinner” modality (where the “bnd” comes from).
 
 ### [ 02 ] Functional requirements
 
 > Registra los requerimientos funcionales considerados para este proyecto, para que no sea tan extenso, puedes dividirlo en [milestones](#definiciones). Por ejemplo: Milestone 1:  Formulario o pantalla para registro de nuevos usuarios. Milestone 2: Pantalla de inicio que muestra un registro de todos los proyectos. Milestone 3: CRUD  de proyectos. No es necesario describir aquí en detalle todas las tareas, sino más bien los módulos o milestones más generales.
 
-- Milestone 1. Configuración inicial del proyecto: Crear estructura base, directorios, agregar librerías...
-- Milestone 2. Creacion de Base de datos: Se crearan las migraciones para generar el esquema.
-- Milestone 3. Crud de usuarios: ...
-- Milestone 4. Crud de alojamientos: ...
-- Milestone 5. Crud de reservas de alojamientos: ...
-- Milestone x. Deployment: ...
+- Milestone 1. Initial Configuration of the Project: Create base structure, directories, add libraries...
+- Milestone 2. Database Creation: Migrations will be created to generate the schema.
+- Milestone 3. User's CRUD: Create, Read, Update and Delete Users.
+- Milestone 4. Housing CRUD: Create, Read, Update and Delete the Place.
+- Milestone 5. Housing Reservation CRUD: Create, Read, Update and Delete the reservations.
+- Milestone 6. Deployment: Deploy the proyect
 
 ### [ 03 ] Non-functional requirements
 
+-  Tecnologias
+   - ReactJS for the frontend
+   - Ruby on Rails for the backend
 - Calidad
   - Utilizar estilo de código definido por la comunidad (apoyarse en Rubocop)
   - Incluir pruebas unitarias(tal vez)
@@ -90,14 +93,18 @@ Milestone | WK1 | WK2 | WK3 | WK4 | WK5 | WK6 | WK7 | WK8 | WK9 |
 ---|---|---|---|---|---|---|---|---|---|
  #1 | x | x |
  #2 |   | x |
+ #3 |   |   |
+ #4 |   |   |
+ #5 |   |   |
+ #6 |   |   |
 
 ### [ 05 ] UI Design
 
-> Incluye aquí un enlace a tu propuesta de diseño
+> https://www.figma.com/file/ztQa5xTqxag18W7V8Fh40m/EarthB%26D-Mockup?node-id=0%3A1&t=gzjrVxfOQw0rs8uU-1
 
 ### [ 06 ] Database model
 
-> Incluye aquí un enlace a tu modelo de base de datos
+> https://lucid.app/lucidchart/d90becb2-df51-4563-9c6d-a7f5db6714c4/edit?viewport_loc=-961%2C-168%2C4270%2C1946%2C0_0&invitationId=inv_752c20cf-beb9-45d2-a0e2-aa44624653fc
 
 ### [ 07 ] GitHub Planner
 
