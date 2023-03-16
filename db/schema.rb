@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_15_213551) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_16_024223) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amenities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cities", force: :cascade do |t|
     t.bigint "state_id"
@@ -20,6 +26,42 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_213551) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["state_id"], name: "index_cities_on_state_id"
+  end
+
+  create_table "place_amenities", force: :cascade do |t|
+    t.bigint "amenity_id"
+    t.bigint "place_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["amenity_id"], name: "index_place_amenities_on_amenity_id"
+    t.index ["place_id"], name: "index_place_amenities_on_place_id"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.bigint "city_id"
+    t.string "description"
+    t.integer "number_rooms", default: 0
+    t.integer "number_bathrooms", default: 0
+    t.integer "max_guest", default: 0
+    t.integer "price_by_night", default: 0
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_places_on_city_id"
+    t.index ["user_id"], name: "index_places_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "place_id"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_reviews_on_place_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "states", force: :cascade do |t|
@@ -42,4 +84,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_213551) do
   end
 
   add_foreign_key "cities", "states"
+  add_foreign_key "place_amenities", "amenities"
+  add_foreign_key "place_amenities", "places"
+  add_foreign_key "places", "cities"
+  add_foreign_key "places", "users"
+  add_foreign_key "reviews", "places"
+  add_foreign_key "reviews", "users"
 end
