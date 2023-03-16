@@ -1,0 +1,2 @@
+class PlaceAmenity < ApplicationRecord
+end
