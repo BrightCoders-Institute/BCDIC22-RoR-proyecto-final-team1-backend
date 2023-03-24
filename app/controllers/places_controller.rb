@@ -21,7 +21,7 @@ class PlacesController < ApplicationController
     @place = Place.new(place_params)
     if @place.valid? 
       @place.save
-      render json: @place, status: :created
+      render json: { place: @place, message: "Place created successfully" }, status: :created
     else
       render json: { errors: @place.errors.full_messages }, status: :unprocessable_entity
     end
