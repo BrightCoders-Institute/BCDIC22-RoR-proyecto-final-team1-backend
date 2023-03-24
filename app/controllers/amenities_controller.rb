@@ -41,6 +41,11 @@ class AmenitiesController < ApplicationController
   end
 
   def destroy
+		amenity = Amenity.find_by(id: params[:id])
+		if amenity
+			amenity.destroy
+			render json: "Amenity has been deleted"
+		end
   end
  
 	private
