@@ -18,7 +18,27 @@ class Users::UsersController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    user = User.find_by(id: params[:id])
+    if user
+      user.update(email: params[:email], password: params[:password], name: params[:name])
+      render json: 'User updated succesfully'
+    else
+      render json: {
+        error: 'User not found!'
+      }
+    end
+  end
 
-  def destroy; end
+  def destroy
+    user = User.find_by(id: params[:id])
+    if user
+      user.destroy
+      render json: 'User has been deleted'
+    else
+      render json: {
+        error: 'User not found!'
+      }
+    end
+  end
 end
