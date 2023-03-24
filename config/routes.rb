@@ -15,9 +15,7 @@ Rails.application.routes.draw do
                registrations: 'users/registrations'
              }
 
-  # resources :users, only: %i[index show create update destroy]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :users do
+    resources :users, only: %i[index show update destroy]
+  end
 end
