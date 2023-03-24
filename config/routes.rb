@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'private/test'
   get '/current_user', to: 'current_user#index'
   devise_for :users,
              path: '',
@@ -26,4 +25,5 @@ Rails.application.routes.draw do
   end
   
   resources :amenities, only: [:index, :show, :create, :update, :destroy]
+  resources :states, only: [:index, :show, :create, :update, :destroy]
 end
