@@ -1,5 +1,7 @@
 class AmenitiesController < ApplicationController
   def index
+		amenities = Amenity.all
+		render json: amenities, status: 200
   end
 
   def show
@@ -15,6 +17,7 @@ class AmenitiesController < ApplicationController
 			render json: {
 				error: "error creating.."
 			}
+		end
   end
 
   def update
