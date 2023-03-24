@@ -6,6 +6,15 @@ class AmenitiesController < ApplicationController
   end
 
   def create
+		amenity = Amenity.new(
+			name: ame_params[:name]
+		)
+		if amenity.save
+			render json: amenity, status: 200
+		else
+			render json: {
+				error: "error creating.."
+			}
   end
 
   def update
@@ -13,4 +22,10 @@ class AmenitiesController < ApplicationController
 
   def destroy
   end
+ 
+	private
+	def ame_params
+		params.require(:amenity).permit(
+			[:name])
+	end
 end
