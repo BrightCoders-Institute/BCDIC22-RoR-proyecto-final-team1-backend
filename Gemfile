@@ -12,6 +12,7 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'devise'
 gem 'devise-jwt'
+gem 'dotenv-rails', groups: %i[development test]
 gem 'jsonapi-serializer'
 gem 'puma', '~> 5.0'
 
