@@ -15,8 +15,15 @@ Rails.application.routes.draw do
                registrations: 'users/registrations'
              }
 
+  # Defines the root path route ("/")
+  # root "articles#index"
+  get '/places', to: 'places#index'
+  get '/place/:id', to: 'places#show'
+  post '/newPlace', to: 'places#create'
+
   namespace :users do
     resources :users, only: %i[index show update destroy]
   end
+  
   resources :amenities, only: [:index, :show, :create, :update, :destroy]
 end
