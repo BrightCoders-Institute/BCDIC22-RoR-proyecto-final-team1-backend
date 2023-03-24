@@ -29,6 +29,15 @@ class AmenitiesController < ApplicationController
   end
 
   def update
+		amenity = Amenity.find_by(id: params[:id])
+		if amenity
+			amenity.update(name: params[:name])
+			render json: "Amenity record update Successfully"
+		else
+			render json: {
+				error:"Article Not Found"
+			}
+		end
   end
 
   def destroy
