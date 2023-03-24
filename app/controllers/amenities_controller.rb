@@ -5,6 +5,14 @@ class AmenitiesController < ApplicationController
   end
 
   def show
+		amenity = Amenity.find_by(id: params[:id])
+		if amenity
+			render json: amenity, status: 200
+		else
+			render json: {
+				error: "Article not found"
+			}
+		end
   end
 
   def create
