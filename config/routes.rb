@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   namespace :users do
     resources :users, only: %i[index show update destroy]
   end
-  
+
   resources :amenities, only: [:index, :show, :create, :update, :destroy]
+  resources :cities, only: [:index, :show, :create, :update, :destroy]
   resources :states, only: [:index, :show, :create, :update, :destroy]
 end
