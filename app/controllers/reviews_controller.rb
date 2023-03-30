@@ -20,14 +20,22 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @review = Review.new
   end
 
   def create
+    @review = Review.new(review_params)
+    if @review.valid? 
+      @review.save
+      render json: { review: @review, message: "Review created successfully" }, status: :created
+    else
+      render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   private
   
-  def place_params
+  def review_params
     params.require(:review).permit(:user_id, :place_id, :comment)
   end
 end
