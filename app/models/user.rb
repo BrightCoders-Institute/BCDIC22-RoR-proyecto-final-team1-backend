@@ -6,4 +6,5 @@ class User < ApplicationRecord
          :validatable, :jwt_authenticatable, jwt_revocation_strategy: self
 
   has_many :places
+  has_many :reviews
 end
