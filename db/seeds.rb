@@ -20,5 +20,6 @@ dummyAmenity7 = Amenity.create(name: "Terraza o balcón")
 dummyAmenity8 = Amenity.create(name: "Jardín privado, Con valla en parte del perímetro")
 dummyAmenity9 = Amenity.create(name: "WIFI")
 dummyAmenity10 = Amenity.create(name: "Libre de humo de tabaco")
+addAmenity = PlaceAmenity.create(place_id: 1, amenity_id: 1) # creates the join record directly
 
 puts "Seed data successfully loaded!"
