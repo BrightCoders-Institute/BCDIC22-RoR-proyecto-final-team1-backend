@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   post '/newReview', to: 'reviews#create'
 
   get 'amenities/:place_id', to: 'place_amenities#show'
+  post 'newPlaceAmenitie/', to: 'place_amenities#create'
+
   namespace :users do
     resources :users, only: %i[index show update destroy]
   end
