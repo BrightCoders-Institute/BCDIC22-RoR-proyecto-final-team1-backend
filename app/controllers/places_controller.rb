@@ -7,7 +7,7 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find_by(id: params[:id])
     if @place
-      render json: { user: @place.user.name, name: @place.name, description: @place.description, max_guest: @place.max_guest, number_rooms: @place.number_rooms, number_bathrooms: @place.number_bathrooms, latitude: @place.latitude, longitude: @place.longitude, city: @place.city.name, state: @place.city.state.name }
+      render json: { user: @place.user.name, name: @place.name, description: @place.description, max_guest: @place.max_guest, number_rooms: @place.number_rooms, number_bathrooms: @place.number_bathrooms, latitude: @place.latitude, longitude: @place.longitude, city: @place.city.name, state: @place.city.state.name, price_by_night: @place.price_by_night }
     else
       render json: { error: 'Place not found' }, status: :not_found
     end
