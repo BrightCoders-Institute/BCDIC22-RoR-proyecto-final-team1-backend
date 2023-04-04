@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_21_233144) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_224344) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_233144) do
     t.index ["user_id"], name: "index_places_on_user_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.date "starting_date"
+    t.date "ending_date"
+    t.integer "total_price"
+    t.bigint "place_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_reservations_on_place_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "place_id"
@@ -90,6 +102,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_233144) do
   add_foreign_key "place_amenities", "places"
   add_foreign_key "places", "cities"
   add_foreign_key "places", "users"
+  add_foreign_key "reservations", "places"
+  add_foreign_key "reservations", "users"
   add_foreign_key "reviews", "places"
   add_foreign_key "reviews", "users"
 end
