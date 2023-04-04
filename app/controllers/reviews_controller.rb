@@ -6,9 +6,10 @@ class ReviewsController < ApplicationController
     reviews_array = []
     @reviews.each do |review|
       review_hash = {}
+      review_hash[:id] = review.id
       review_hash[:author] = review.user.name
       review_hash[:comment] = review.comment
-      review_hash[:created_at] = review.created_at      
+      review_hash[:created_at] = review.created_at
       reviews_array << review_hash
     end
     if @reviews.length >= 1
