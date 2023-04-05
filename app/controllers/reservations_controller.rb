@@ -3,11 +3,12 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    @reservation = Place.find_by(id: params[:id])
-    if @reservation
-      render json: {  }
+    @user = User.find(params[:user_id])
+    @reservations = @user.reservations
+    if @reservations.length >= 1
+      render json: @reservations
     else
-      render json: { error: '' }, status: :not_found
+      render json: { reservation: 'You have not made a reservation yet' }, status: :ok
     end
   end
 
