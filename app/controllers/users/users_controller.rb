@@ -19,9 +19,9 @@ class Users::UsersController < ApplicationController
   end
 
   def update
-    user = User.find_by(id: params[:id])
-    if user
-      user.update(email: params[:email], password: params[:password], name: params[:name])
+    @user = User.find(params[:id])
+    if @user
+      @user.update(user_params)
       render json: 'User updated succesfully'
     else
       render json: {
@@ -40,5 +40,11 @@ class Users::UsersController < ApplicationController
         error: 'User not found!'
       }
     end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :password, :name, :phone_number, :address, :identification)
   end
 end
