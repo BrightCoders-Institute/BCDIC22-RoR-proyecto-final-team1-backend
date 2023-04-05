@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get '/reviews/:place_id', to: 'reviews#show'
   post '/newReview', to: 'reviews#create'
 
+  post '/newReservation/', to: 'reservations#create'
+
   namespace :users do
     resources :users, only: %i[index show update destroy]
   end
