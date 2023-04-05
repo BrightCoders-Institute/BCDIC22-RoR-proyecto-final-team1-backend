@@ -3,7 +3,11 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find_by(id: params[:user_id])
+    if @user.nil?
+      render json: { error: 'User not found' }, status: :not_found
+      return
+    end
     @reservations = @user.reservations
     if @reservations.length >= 1
       render json: @reservations
