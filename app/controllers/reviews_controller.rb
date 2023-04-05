@@ -13,7 +13,6 @@ class ReviewsController < ApplicationController
       reviews_array << review_hash
     end
     if @reviews.length >= 1
-      # render json: @reviews
       render json: reviews_array.to_json
     else
       render json: { error: 'Place does not have any reviews' }, status: :not_found
