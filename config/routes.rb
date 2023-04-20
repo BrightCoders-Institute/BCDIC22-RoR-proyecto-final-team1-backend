@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/places', to: 'places#index'
   get '/place/:id', to: 'places#show'
   post '/newPlace', to: 'places#create'
+  put '/updatePlace/:id', to: 'places#update'
+  delete '/deletePlace/:id', to: 'places#destroy'
 
   get '/reviews/:place_id', to: 'reviews#show'
   post '/newReview', to: 'reviews#create'

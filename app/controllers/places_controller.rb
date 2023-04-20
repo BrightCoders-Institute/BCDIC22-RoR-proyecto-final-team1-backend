@@ -14,7 +14,7 @@ class PlacesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @place = Place.new
   end
 
   def create
@@ -31,13 +31,31 @@ class PlacesController < ApplicationController
   end
 
   def update
+    @place = Place.find(params[:id])
+    if @place
+      @place.update(place_params)
+      render json: 'Place updated succesfully'
+    else
+      render json: {
+        error: 'Place not found!'
+      }
+    end
   end
 
   def destroy
+    place = Place.find_by(id: params[:id])
+    if place
+      place.destroy
+      render json: 'Place has been deleted'
+    else
+      render json: {
+        error: 'Place not found!'
+      }
+    end
   end
 
   private
-  
+
   def place_params
     params.require(:place).permit(:user_id, :name, :city_id, :description, :number_rooms, :number_bathrooms, :max_guest, :price_by_night, :latitude, :longitude)
   end
