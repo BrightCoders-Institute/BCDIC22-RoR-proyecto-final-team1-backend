@@ -1,30 +1,34 @@
 ![BrightCoders Logo](img/logo.png)
 
-# Final Project
-
-## EarthBnD
-## Content Table
-  - [Proyect Description](#-01--project-description)
-  - [How to install and run the project](#-how-to-install-and-run-the-project)
-  - [How to use the project](#-how-to-use-the-project)
-  - [Credits](#-credits)
-  - [Badges](#-badges)
+# EarthBnD
 
 ## Project description
 
-> Este es un proyecto que busca replicar las funcionalidades basicas de la famosa plataforma Air-Bnb. (Airbnb es un mercado comunitario que sirve para publicar, dar publicidad y reservar alojamiento de forma económica a través de internet o desde tu smarthphone). Está basado en la modalidad “Bed and Dinner” (de donde proviene el “bnd”)
+> Este es un proyecto que busca replicar las funcionalidades basicas de la famosa plataforma Air-Bnb. (Airbnb es un mercado comunitario que sirve para publicar, dar publicidad y reservar alojamiento de forma económica a través de internet o desde tu smarthphone). Está basado en la modalidad “Bed and Dinner” (de donde proviene el “bnd”). En este caso este repo solo es la api que se desarrollo para el proyecto.
 
-## How to Install and Run the Project
-## How to Use the Project.
-## Credits
-  - Carlos Ospina carlossospinag@gmail.com
-  - Reiyirak pdsmej@gmail.com
-  - Severo siglesias@ucol.mx
-  - Yaxkin121 ycardenas13@ucol.mx
+## How to use the Project
+> Esta api se puede usar mediante el link https://earthbnd.onrender.com/rutaaqui, dende dependiendo de la ruta se pueden mostrar resultados o hacer acciones CRUD, para algunas acciones CRUD se ocuparia un programa como Postman o algo parecido. 
 
+## 🤝 Colaborators.
+- Reiyirak <pdsmej@gmail.com>
+- Carlos Ospina <carlossospinag@gmail.com>
+- Severo <siglesias@ucol.mx>
+- Yaxkin121 <ycardenas13@ucol.mx>
 
-  Co-authored-by: Yaxkin121 <ycardenas13@ucol.mx>
-  Co-authored-by: Reiyirak <pdsmej@gmail.com>
-  Co-authored-by: Severo Iglesias <siglesias@ucol.mx>
-  Co-authored-by: Carloso0114 <carlossospinag@gmail.com>
-## Badges
+## 💡 Technologies
+- Git
+- Github
+- Visual Studio Code
+- NVim
+- Ruby on Rails API
+- Rubocop
+- Postgresql
+
+## 🎯 Activities
+- Crear el diseño del __UI__ para el proyecto en general
+- Crear el diagrama de __BD__ 
+- Crear la base de datos en __PostgreSQL__
+- Crear los __controladores__ necesarios para las acciones __CRUD__
+- Crear las __rutas__ necesarias para poder acceder las acciones __CRUD__
+- Agregar __gemas__ necesarias y __configurarlas__
+- __Deployment__ el __API__ en __render__ junto con la base de datos
